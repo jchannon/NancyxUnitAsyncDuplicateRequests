@@ -16,7 +16,9 @@
         {
             app
                 .Use(MyMiddleware.DoIt())
-                .UseNancy();
+                //.UseNancy()
+                .UseNancy(options => options.Bootstrapper = new MyBootstrapper())
+                ;
         }
     }
 
